@@ -15,6 +15,7 @@ public:
     Ratio(int n, int d) {
         numer = n;
         denom = d;
+        // значение целой части дроби присваевается только при вызов метода wholePart()
         whole = 0;
     }
 
