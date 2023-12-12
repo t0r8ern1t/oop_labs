@@ -54,14 +54,14 @@ public:
     
     // перевод в десятичную дробь
     float toDecimal() {
-        cout << "перевод в десятичную дробь" << endl;
+        cout << "conversion to decimal" << endl;
         float tmp = float(numer) / float(denom);
         return tmp;
     }
 
     // выделение целой части
     Ratio wholePart() {
-        cout << "выделение целой части" << endl;
+        cout << "whole part of the ratio" << endl;
         Ratio tmp;
         if (numer < denom)
             tmp = *this;
@@ -88,7 +88,7 @@ public:
     }
 
     Ratio add(const Ratio& r) {
-        cout << "сложение" << endl;
+        cout << "addition" << endl;
         Ratio tmp = *this + r;
         return tmp;
     }
@@ -102,7 +102,7 @@ public:
     }
 
     Ratio subtract(const Ratio& r) {
-        cout << "вычитание" << endl;
+        cout << "subtraction" << endl;
         Ratio tmp = *this - r;
         return tmp;
     }
@@ -116,7 +116,7 @@ public:
     }
 
     Ratio multiply(const Ratio& r) {
-        cout << "умножение" << endl;
+        cout << "multiplication" << endl;
         Ratio tmp = *this * r;
         return tmp;
     }
@@ -130,7 +130,7 @@ public:
     }
 
     Ratio divide(const Ratio& r) {
-        cout << "деление" << endl;
+        cout << "division" << endl;
         Ratio tmp = *this / r;
         return tmp;
     }
@@ -143,11 +143,10 @@ private:
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
     Ratio x, y;
-    cout << "введите первую дробь: ";
+    cout << "enter first ratio: ";
     x.read();
-    cout << "введите вторую дробь: ";
+    cout << "enter second ratio: ";
     y.read();
     cout << endl;
     Ratio z = x.add(y);
