@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\controls">
+      <UniqueIdentifier>{888bee78-4a4d-4695-b530-76d25accaf46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\windows">
+      <UniqueIdentifier>{a50b424e-e5aa-4fc3-9e08-eea3e1cdd189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\linux">
+      <UniqueIdentifier>{5527a2ef-9a74-4f5e-b301-682c14bc39e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\macos">
+      <UniqueIdentifier>{b1c60688-a4cd-4a9b-a066-fc7d1f838400}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lab6.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="controls\Controls.hpp">
+      <Filter>Файлы заголовков\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="win\WinControls.hpp">
+      <Filter>Файлы заголовков\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="linux\LinuxControls.hpp">
+      <Filter>Файлы заголовков\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="macos\MacControls.hpp">
+      <Filter>Файлы заголовков\macos</Filter>
+    </ClInclude>
+    <ClInclude Include="controls\Factory.hpp">
+      <Filter>Файлы заголовков\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="linux\LinuxFactory.hpp">
+      <Filter>Файлы заголовков\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="macos\MacFactory.hpp">
+      <Filter>Файлы заголовков\macos</Filter>
+    </ClInclude>
+    <ClInclude Include="win\WinFactory.hpp">
+      <Filter>Файлы заголовков\windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
