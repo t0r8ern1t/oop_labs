@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06d57832-87cc-428d-810d-1013881ebbb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab1/.vs/lab1/FileContentIndex/b89bf7aa-e0c8-4d16-b09a-6e243e18695f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.vs/lab1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.vs/lab1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.vs/lab1/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.vs/lab1/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Debug/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Debug/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/Debug/lab1.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/lab1/lab1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/lab1/lab1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.vs/lab2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.vs/lab2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.vs/lab2/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.vs/lab2/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/lab5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/lab5/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab5/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/lab5/v17/ipch/AutoPCH/565e1a0603594b30/IUSERMANAGER.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/lab5/v17/ipch/AutoPCH/565e1a0603594b30/IUSERMANAGER.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sessions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.4" />
+  </component>
+  <component name="ProjectId" id="2ZoOOLjnHcixGfzKb64AumwewWF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06d57832-87cc-428d-810d-1013881ebbb7" name="Changes" comment="" />
+      <created>1703084934110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703084934110</updated>
+      <workItem from="1703084935674" duration="10000" />
+      <workItem from="1703085557726" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>

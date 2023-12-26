@@ -5,17 +5,18 @@ using namespace std;
 
 class ICalc 
 {
-public:
+protected:
     double m_x0, m_step;
     function<double(double)> m_f;
 
-    ICalc(double x0, function<double(double)>f, double step = 0)
+public:
+    ICalc(double x0, function<double(double)>f, double step)
     {
         m_x0 = x0;
         m_step = step;
         m_f = move(f);
-        if (step == 0) m_step = 0.01;
-    };
+    }
+
     virtual double Calcdiff() { return 0; };
 };
 
@@ -57,20 +58,24 @@ public:
 
 
 function<double(double)>f = [](double x) {
-    return x * x;
+    return x*x;
 };
 
 
 int main()
 {
-    double x0 = 1;
-    double step = 0.1;
+    setlocale(LC_ALL, "Russian");
+    double x0, step;
+    cout << "Введите х0" << endl;
+    cin >> x0;
+    cout << "Введите шаг" << endl;
+    cin >> step;
 
     auto calcr = make_unique<Calcright>(Calcright(x0, f, step));
     auto calcl = make_unique<Calcleft>(Calcleft(x0, f, step));
-    auto calcm = make_unique<Calcmiddle>(Calcmiddle(x0, f));
+    auto calcm = make_unique<Calcmiddle>(Calcmiddle(x0, f, step));
 
-    cout << calcr->Calcdiff() << endl;
-    cout << calcl->Calcdiff() << endl;
-    cout << calcm->Calcdiff() << endl;
+    cout << "Правая производная: " << calcr->Calcdiff() << endl;
+    cout << "Левая производная: " << calcl->Calcdiff() << endl;
+    cout << "Средняя производная: " << calcm->Calcdiff() << endl;
 }

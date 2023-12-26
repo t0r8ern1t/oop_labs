@@ -34,11 +34,28 @@ public:
     }
 
     // ввод с консоли
-    void read() {
+    bool read() {
         string str;
         getline(cin, str);
+        if (str.find('/') == -1) {
+            cout << "Вы забыли слэш :)" << endl;
+            return 0;
+        }
         int sep = str.find('/');
-        this->set(stoi(str.substr(0, sep)), stoi(str.substr(sep + 1)));
+        int a, b;
+        try {
+            a = stoi(str.substr(0, sep));
+            b = stoi(str.substr(sep + 1));
+        } catch (exception &err) {
+            cout << "Числитель и знаменатель должны состоять из цифр и/или быть меньше 2147483647 :))" << endl;
+            return 0;
+        }
+        if (b == 0) {
+            cout << "Делить на ноль нельзя :(" << endl;
+            return 0;
+        }
+        this->set(a, b);
+        return 1;
     }
 
 
@@ -54,20 +71,26 @@ public:
     
     // перевод в десятичную дробь
     float toDecimal() {
-        cout << "conversion to decimal" << endl;
+        cout << "Перевод в десятичную дробь ";
         float tmp = float(numer) / float(denom);
         return tmp;
     }
 
     // выделение целой части
     Ratio wholePart() {
-        cout << "whole part of the ratio" << endl;
+        cout << "Выделение целой части ";
         Ratio tmp;
-        if (numer < denom)
+        if (abs(numer) < abs(denom))
             tmp = *this;
         else {
-            tmp.whole = numer / denom;
-            tmp.numer = numer - denom * tmp.whole;
+            if (tmp.numer >= 0) {
+                tmp.whole = numer / denom;
+                tmp.numer = numer - denom * tmp.whole;
+            }
+            else {
+                tmp.whole = numer / denom - 1;
+                tmp.numer = numer - (denom * tmp.whole);
+            }
             tmp.denom = denom;
         }
         return tmp;
@@ -88,7 +111,7 @@ public:
     }
 
     Ratio add(const Ratio& r) {
-        cout << "addition" << endl;
+        cout << "x + y = ";
         Ratio tmp = *this + r;
         return tmp;
     }
@@ -102,7 +125,7 @@ public:
     }
 
     Ratio subtract(const Ratio& r) {
-        cout << "subtraction" << endl;
+        cout << "x - y = ";
         Ratio tmp = *this - r;
         return tmp;
     }
@@ -116,7 +139,7 @@ public:
     }
 
     Ratio multiply(const Ratio& r) {
-        cout << "multiplication" << endl;
+        cout << "x * y = ";
         Ratio tmp = *this * r;
         return tmp;
     }
@@ -125,12 +148,16 @@ public:
         Ratio tmp;
         tmp.numer = numer * r.getDenom();
         tmp.denom = denom * r.getNumer();
+        if (r.getNumer() == 0) {
+            cout << "Делить на ноль нельзя :(" << endl;
+            return *this;
+        }
         tmp.simplify();
         return tmp;
     }
 
     Ratio divide(const Ratio& r) {
-        cout << "division" << endl;
+        cout << "x / y = ";
         Ratio tmp = *this / r;
         return tmp;
     }
@@ -143,16 +170,23 @@ private:
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     Ratio x, y;
-    cout << "enter first ratio: ";
-    x.read();
-    cout << "enter second ratio: ";
-    y.read();
+    bool x_flag = 0, y_flag = 0;
+    cout << "Вводите дроби в формате а/b" << endl;
+    while (!x_flag) {
+        cout << "Введите первую дробь (х): ";
+        x_flag = x.read();
+    }
+    while (!y_flag) {
+        cout << "Введите вторую дробь (у): ";
+        y_flag = y.read();
+    }
     cout << endl;
     Ratio z = x.add(y);
     z.print();
     z.wholePart().print();
-    cout << z.toDecimal() << endl;;
+    cout << z.toDecimal() << endl;
     x.subtract(y).print();
     x.multiply(y).print();
     x.divide(y).print();
