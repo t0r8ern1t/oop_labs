@@ -17,10 +17,16 @@ public:
         m_f = move(f);
     }
 
+    double getStep() { return m_step; }
+
+    void setFunc(function<double(double)> f) { m_f = move(f); }
+
+    void setStep(double step) { m_step = step; }
+
     virtual double Calcdiff() { return 0; };
 };
 
-class Calcleft : ICalc
+class Calcleft : public ICalc
 {
 public:
     Calcleft(double x0, function<double(double)>f, double step = 0) : ICalc(x0, f, step) {};
@@ -32,7 +38,7 @@ public:
     };
 };
 
-class Calcright : ICalc
+class Calcright : public ICalc
 {
 public:
     Calcright(double x0, function<double(double)>f, double step = 0) : ICalc(x0, f, step) {};
@@ -44,7 +50,7 @@ public:
     };
 };
 
-class Calcmiddle : ICalc
+class Calcmiddle : public ICalc
 {
 public:
     Calcmiddle(double x0, function<double(double)>f, double step = 0) : ICalc(x0, f, step) {};
@@ -57,8 +63,12 @@ public:
 };
 
 
-function<double(double)>f = [](double x) {
+function<double(double)>square = [](double x) {
     return x*x;
+};
+
+function<double(double)>cube = [](double x) {
+    return x * x * x;
 };
 
 
@@ -71,11 +81,19 @@ int main()
     cout << "Введите шаг" << endl;
     cin >> step;
 
-    auto calcr = make_unique<Calcright>(Calcright(x0, f, step));
-    auto calcl = make_unique<Calcleft>(Calcleft(x0, f, step));
-    auto calcm = make_unique<Calcmiddle>(Calcmiddle(x0, f, step));
+    auto calcr = make_unique<Calcright>(Calcright(x0, square, step));
+    auto calcl = make_unique<Calcleft>(Calcleft(x0, square, step));
+    auto calcm = make_unique<Calcmiddle>(Calcmiddle(x0, square, step));
 
-    cout << "Правая производная: " << calcr->Calcdiff() << endl;
+    cout << "Для функции х^2:" << endl << "Правая производная: " << calcr->Calcdiff() << endl;
+    cout << "Левая производная: " << calcl->Calcdiff() << endl;
+    cout << "Средняя производная: " << calcm->Calcdiff() << endl << endl;
+
+    calcr->setFunc(cube);
+    calcl->setFunc(cube);
+    calcm->setFunc(cube);
+
+    cout << "Для функции х^3:" << endl << "Правая производная: " << calcr->Calcdiff() << endl;
     cout << "Левая производная: " << calcl->Calcdiff() << endl;
     cout << "Средняя производная: " << calcm->Calcdiff() << endl;
 }
