@@ -75,11 +75,13 @@ function<double(double)>cube = [](double x) {
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    double x0, step;
+    double x0, step = 0;
     cout << "Введите х0" << endl;
     cin >> x0;
-    cout << "Введите шаг" << endl;
-    cin >> step;
+    while (step == 0) {
+        cout << "Введите шаг, шаг не должен быть равен 0" << endl;
+        cin >> step;
+    }
 
     auto calcr = make_unique<Calcright>(Calcright(x0, square, step));
     auto calcl = make_unique<Calcleft>(Calcleft(x0, square, step));
