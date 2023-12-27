@@ -1,10 +1,15 @@
-﻿#include <iostream>
-#include <string>
+﻿#include <string>
+#include <iostream>
 
 using namespace std;
 
 class Ratio
 {
+private:
+    int whole;
+    int numer;
+    int denom;
+
 public:
     Ratio() {
         numer = 0;
@@ -13,6 +18,8 @@ public:
     }
 
     Ratio(int n, int d) {
+        if (d == 0)
+            throw invalid_argument("Делить на ноль нельзя");
         numer = n;
         denom = d;
         // значение целой части дроби присваевается только при вызов метода wholePart()
@@ -21,7 +28,10 @@ public:
 
     int getNumer() const { return numer; }
     int getDenom() const { return denom; }
+
     void set(int n, int d) {
+        if (d == 0)
+            throw invalid_argument("Делить на ноль нельзя");
         numer = n;
         denom = d;
     }
@@ -46,15 +56,18 @@ public:
         try {
             a = stoi(str.substr(0, sep));
             b = stoi(str.substr(sep + 1));
-        } catch (exception &err) {
+        }
+        catch (exception& err) {
             cout << "Числитель и знаменатель должны состоять из цифр и/или быть меньше 2147483647 :))" << endl;
             return 0;
         }
-        if (b == 0) {
-            cout << "Делить на ноль нельзя :(" << endl;
+        try {
+            this->set(a, b);
+        }
+        catch (const invalid_argument& e) {
+            cout << e.what() << endl;
             return 0;
         }
-        this->set(a, b);
         return 1;
     }
 
@@ -68,7 +81,7 @@ public:
             }
         }
     }
-    
+
     // перевод в десятичную дробь
     float toDecimal() {
         cout << "Перевод в десятичную дробь ";
@@ -162,10 +175,6 @@ public:
         return tmp;
     }
 
-private:
-    int whole;
-    int numer;
-    int denom;
 };
 
 int main()
